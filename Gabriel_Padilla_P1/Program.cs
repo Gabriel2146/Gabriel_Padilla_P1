@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Gabriel_Padilla_P1.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Gabriel_Padilla_P1Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Gabriel_Padilla_P1Context") ?? throw new InvalidOperationException("Connection string 'Gabriel_Padilla_P1Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
