@@ -15,5 +15,6 @@ namespace Gabriel_Padilla_P1.Data
         }
 
         public DbSet<Gabriel_Padilla_P1.Models.PadillaG> PadillaG { get; set; } = default!;
+        public DbSet<Gabriel_Padilla_P1.Models.Carrera> Carrera { get; set; } = default!;
     }
 }
